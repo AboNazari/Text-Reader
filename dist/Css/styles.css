@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  padding: 1em;
+}
+
+.navbar {
+  margin: auto;
+  max-width: 1260px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 2rem;
+}
+
+.nav-el a {
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.logo-el {
+  justify-self: flex-start;
+  margin-left: 10%;
+}
+
+.logo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.burger {
+  color: white;
+  font-size: 1.5em;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logo-el {
+    position: absolute;
+    left: 0;
+    margin: 0.2em 1em;
+  }
+}
+
+.clicked .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.clicked .nav {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.clicked .nav .nav-el {
+  border-bottom: 1px white solid;
+  width: 100%;
+  padding-bottom: 0.4em;
+}
+
+.clicked .logo-el {
+  -ms-grid-column-align: left;
+      justify-self: left;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,89 @@
+@import "variables";
+@import "reset";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: $main-color;
+  padding: 1em;
+}
+.navbar {
+  margin: auto;
+  max-width: 1260px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+}
+.nav-el a {
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.logo-el {
+  justify-self: flex-start;
+  margin-left: 10%;
+}
+.logo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.burger {
+  color: white;
+  font-size: 1.5em;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-el {
+    position: absolute;
+    left: 0;
+    margin: 0.2em 1em;
+  }
+}
+
+.clicked {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .nav {
+    flex-direction: column;
+    height: auto;
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+
+    .nav-el {
+      border-bottom: 1px white solid;
+      width: 100%;
+      padding-bottom: 0.4em;
+    }
+  }
+  .logo-el {
+    justify-self: left;
+  }
+}
