@@ -23,6 +23,7 @@
   align-items: center;
   height: 100%;
   gap: 2rem;
+  padding-right: 2em;
 }
 .nav-el a {
   color: white;
@@ -43,13 +44,48 @@
   font-size: 1.5em;
   display: none;
 }
-
+.close {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   .burger {
     display: block;
   }
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .close {
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    transition: all 1s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
   .nav {
     display: none;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+    .nav-el {
+      border-bottom: 1px white solid;
+      width: 100%;
+      padding: 1em;
+    }
+    .control {
+      position: absolute;
+      top: 1.8em;
+      right: 4em;
+    }
   }
   .wrapper {
     display: flex;
@@ -60,30 +96,5 @@
     position: absolute;
     left: 0;
     margin: 0.2em 1em;
-  }
-}
-
-.clicked {
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-  }
-  .nav {
-    flex-direction: column;
-    height: auto;
-    margin-top: 1em;
-    width: 100%;
-    text-align: center;
-
-    .nav-el {
-      border-bottom: 1px white solid;
-      width: 100%;
-      padding-bottom: 0.4em;
-    }
-  }
-  .logo-el {
-    justify-self: left;
   }
 }

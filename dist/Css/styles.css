@@ -51,6 +51,7 @@ li {
           align-items: center;
   height: 100%;
   gap: 2rem;
+  padding-right: 2em;
 }
 
 .nav-el a {
@@ -76,12 +77,58 @@ li {
   display: none;
 }
 
+.close {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   .burger {
     display: block;
   }
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .close {
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .close:hover {
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
   .nav {
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .nav .nav-el {
+    border-bottom: 1px white solid;
+    width: 100%;
+    padding: 1em;
+  }
+  .nav .control {
+    position: absolute;
+    top: 1.8em;
+    right: 4em;
   }
   .wrapper {
     display: -webkit-box;
@@ -99,41 +146,5 @@ li {
     left: 0;
     margin: 0.2em 1em;
   }
-}
-
-.clicked .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
-}
-
-.clicked .nav {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: auto;
-  margin-top: 1em;
-  width: 100%;
-  text-align: center;
-}
-
-.clicked .nav .nav-el {
-  border-bottom: 1px white solid;
-  width: 100%;
-  padding-bottom: 0.4em;
-}
-
-.clicked .logo-el {
-  -ms-grid-column-align: left;
-      justify-self: left;
 }
 /*# sourceMappingURL=styles.css.map */
