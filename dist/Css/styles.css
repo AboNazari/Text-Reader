@@ -15,12 +15,17 @@ li {
   list-style-type: none;
 }
 
+body {
+  background-color: #fff;
+  color: #000;
+}
+
 .wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: auto;
-  background-color: #000;
+  background-color: #3b7f94;
   padding: 1em;
 }
 
@@ -55,7 +60,7 @@ li {
 }
 
 .nav-el a {
-  color: white;
+  color: #fff;
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -72,13 +77,40 @@ li {
 }
 
 .burger {
-  color: white;
+  color: #fff;
   font-size: 1.5em;
   display: none;
 }
 
 .close {
   display: none;
+}
+
+.control {
+  font-size: 2em;
+}
+
+#moon {
+  color: #fff;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  display: none;
+}
+
+#moon:hover {
+  text-shadow: 3px 3px 10px #fff;
+}
+
+#sun {
+  display: block;
+  color: yellow;
+  text-shadow: 1px 1px 3px yellow;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+#sun:hover {
+  text-shadow: 3px 3px 10px yellow;
 }
 
 @media only screen and (max-width: 768px) {
@@ -96,8 +128,9 @@ li {
             justify-content: center;
   }
   .close {
+    display: block;
     font-size: 1.5rem;
-    color: white;
+    color: #fff;
     position: absolute;
     top: 1em;
     right: 1em;
@@ -119,9 +152,10 @@ li {
     margin-top: 1em;
     width: 100%;
     text-align: center;
+    padding-right: 0;
   }
   .nav .nav-el {
-    border-bottom: 1px white solid;
+    border-bottom: 1px #fff solid;
     width: 100%;
     padding: 1em;
   }

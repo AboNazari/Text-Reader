@@ -1,8 +1,12 @@
 @import "variables";
 @import "reset";
 
+body {
+  background-color: $light-color;
+  color: $dark-color;
+}
 .wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: auto;
@@ -26,7 +30,7 @@
   padding-right: 2em;
 }
 .nav-el a {
-  color: white;
+  color: $light-color;
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -40,13 +44,35 @@
   width: 50px;
 }
 .burger {
-  color: white;
+  color: $light-color;
   font-size: 1.5em;
   display: none;
 }
 .close {
   display: none;
 }
+.control {
+  font-size: 2em;
+}
+
+#moon {
+  color: $light-color;
+  transition: all 2s ease-out;
+  display: none;
+}
+#moon:hover {
+  text-shadow: 3px 3px 10px $light-color;
+}
+#sun {
+  display: block;
+  color: yellow;
+  text-shadow: 1px 1px 3px yellow;
+  transition: all 2s ease-out;
+}
+#sun:hover {
+  text-shadow: 3px 3px 10px yellow;
+}
+
 @media only screen and (max-width: 768px) {
   .burger {
     display: block;
@@ -57,8 +83,9 @@
     justify-content: center;
   }
   .close {
+    display: block;
     font-size: 1.5rem;
-    color: white;
+    color: $light-color;
     position: absolute;
     top: 1em;
     right: 1em;
@@ -76,8 +103,9 @@
     margin-top: 1em;
     width: 100%;
     text-align: center;
+    padding-right: 0;
     .nav-el {
-      border-bottom: 1px white solid;
+      border-bottom: 1px $light-color solid;
       width: 100%;
       padding: 1em;
     }
