@@ -1,5 +1,8 @@
-@import "variables";
 @import "reset";
+
+$light-color: #fff;
+$dark-color: #000;
+$main-color: rgb(59, 127, 148);
 
 body {
   background-color: $light-color;
@@ -34,6 +37,13 @@ body {
   font-size: 1.3em;
   font-weight: bold;
 }
+.nav-el:hover {
+  border-bottom: 2px solid $dark-color;
+  padding-bottom: 0.4em;
+  a {
+    color: $dark-color;
+  }
+}
 .logo-el {
   justify-self: flex-start;
   margin-left: 10%;
@@ -55,22 +65,60 @@ body {
   font-size: 2em;
 }
 
+// textreader style
+.textReader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15%;
+  gap: 1.5em;
+}
+.textReader textarea {
+  height: 570px;
+  width: 520px;
+  padding: 1em;
+  text-indent: 2em;
+  border: 2px solid $dark-color;
+  resize: none;
+  border-radius: 1em;
+}
+.buttons button {
+  padding: 1em 2em;
+  margin: 0 1em;
+  background-color: $main-color;
+  color: $light-color;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 1px solid $main-color;
+  border-radius: 1.3em;
+  transition: all ease 1s;
+}
+.buttons button:hover,
+.buttons button:target {
+  background-color: $dark-color;
+  border: 2px solid $light-color;
+}
 #moon {
   color: $light-color;
-  transition: all 2s ease-out;
-  display: none;
+  transition: all 1s ease-out;
+  display: inline-block;
+  // transform: ;
+  opacity: 0;
 }
 #moon:hover {
-  text-shadow: 3px 3px 10px $light-color;
+  text-shadow: 5px 5px 15px $light-color;
 }
 #sun {
-  display: block;
+  display: inline-block;
   color: yellow;
   text-shadow: 1px 1px 3px yellow;
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
 }
 #sun:hover {
-  text-shadow: 3px 3px 10px yellow;
+  text-shadow: 5px 5px 15px yellow;
 }
 
 @media only screen and (max-width: 768px) {

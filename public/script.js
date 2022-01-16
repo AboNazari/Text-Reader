@@ -33,14 +33,18 @@ function checkResize() {
   }
 }
 function handleDay() {
-  sun.style.display = "block";
-  moon.style.display = "none";
+  sun.style.opacity = "1";
+  moon.style.opacity = "0";
+  moon.style.translate = "1em";
+  sun.style.translate = "0em";
   body.style.backgroundColor = "white";
   body.style.color = "black";
 }
 function handleNight() {
-  sun.style.display = "none";
-  moon.style.display = "block";
+  sun.style.opacity = "0";
+  moon.style.opacity = "1";
+  moon.style.translate = "-1em";
+  sun.style.translate = "1em";
   body.style.backgroundColor = "black";
   body.style.color = "white";
 }
