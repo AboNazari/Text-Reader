@@ -148,6 +148,19 @@ body {
   border: 2px solid #fff;
 }
 
+.textReader input {
+  height: 3em;
+  width: 6em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border: 1px solid #3b7f94;
+}
+
 #moon {
   color: #fff;
   -webkit-transition: all 1s ease-out;

@@ -44,13 +44,23 @@ font-awesome/5.15.2/css/all.min.css"
     <div class="textReader">
       <textarea
         name="text"
-        id="textplace"
+        id="text"
         placeholder="past your text here"
       ></textarea>
       <div class="buttons">
-        <button>Play</button>
-        <button>Pause</button>
-        <button>Stop</button>
+        <label for="speed">Speed</label>
+        <input
+          type="number"
+          name="speed"
+          id="speed"
+          min="0.5"
+          max="2"
+          value="1"
+          step="0.5"
+        />
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
       </div>
     </div>
   </body>

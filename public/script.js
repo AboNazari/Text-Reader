@@ -48,3 +48,21 @@ function handleNight() {
   body.style.backgroundColor = "black";
   body.style.color = "white";
 }
+
+// The Text Area Section
+
+const playButton = document.getElementById("play");
+const pauseButton = document.getElementById("pause");
+const stopButton = document.getElementById("stop");
+const text = document.getElementById("text");
+const speed = document.getElementById("speed");
+
+playButton.addEventListener("click", () => {
+  playText(text.value);
+});
+
+function playText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = speed.value || 1;
+  speechSynthesis.speak(utterance);
+}
