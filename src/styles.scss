@@ -73,7 +73,9 @@ body {
   align-items: center;
   margin: auto;
   margin-top: 15%;
+  padding-bottom: 40%;
   gap: 1.5em;
+  border-bottom: 3px solid $dark-color;
 }
 .textReader textarea {
   height: 570px;
@@ -136,6 +138,21 @@ body {
   text-shadow: 5px 5px 15px yellow;
 }
 
+#about {
+  width: 90%;
+  margin: 10% auto;
+}
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#about p {
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: justify;
+}
 @media only screen and (max-width: 768px) {
   .burger {
     display: block;
@@ -192,7 +209,7 @@ body {
     display: block;
   }
   .textReader textarea {
-    margin-top: 3rem;
+    margin-top: 20%;
     height: 400px;
     width: 80%;
   }
