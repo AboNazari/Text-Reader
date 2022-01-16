@@ -52,19 +52,46 @@ function handleNight() {
 }
 
 // The Text Area Section
-
+let currentCharacter;
 const playButton = document.getElementById("play");
 const pauseButton = document.getElementById("pause");
 const stopButton = document.getElementById("stop");
-const text = document.getElementById("text");
+const textBox = document.getElementById("text");
 const speed = document.getElementById("speed");
 
 playButton.addEventListener("click", () => {
-  playText(text.value);
+  playText(textBox.value);
+});
+pauseButton.addEventListener("click", pauseText);
+stopButton.addEventListener("click", stopText);
+speed.addEventListener("input", () => {
+  stopText();
+  playText(utterance.text.substring(currentCharacter));
+});
+
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+utterance.addEventListener("end", () => {
+  textBox.disabled = false;
 });
 
 function playText(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
+  if (speechSynthesis.paused && speechSynthesis.speaking)
+    return speechSynthesis.resume();
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
   utterance.rate = speed.value || 1;
+  textBox.disabled = true;
   speechSynthesis.speak(utterance);
+}
+
+function pauseText() {
+  if (speechSynthesis.speaking) speechSynthesis.pause();
+}
+
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
 }
