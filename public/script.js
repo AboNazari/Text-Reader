@@ -39,6 +39,7 @@ function handleDay() {
   sun.style.translate = "0em";
   body.style.backgroundColor = "white";
   body.style.color = "black";
+  text.style.backgroundColor = "white";
 }
 function handleNight() {
   sun.style.opacity = "0";
@@ -47,6 +48,7 @@ function handleNight() {
   sun.style.translate = "1em";
   body.style.backgroundColor = "black";
   body.style.color = "white";
+  text.style.backgroundColor = "rgb(235, 235, 227)";
 }
 
 // The Text Area Section
