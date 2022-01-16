@@ -1,0 +1,310 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: #3b7f94;
+  padding: 1em;
+}
+
+.navbar {
+  margin: auto;
+  max-width: 1260px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 2rem;
+  padding-right: 2em;
+}
+
+.nav-el a {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.nav-el:hover {
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.4em;
+}
+
+.nav-el:hover a {
+  color: #000;
+}
+
+.logo-el {
+  justify-self: flex-start;
+  margin-left: 10%;
+}
+
+.logo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.burger {
+  color: #fff;
+  font-size: 1.5em;
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.control {
+  font-size: 2em;
+}
+
+.textReader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 15%;
+  padding-bottom: 40%;
+  gap: 1.5em;
+  border-bottom: 3px solid #000;
+}
+
+.textReader textarea {
+  height: 570px;
+  width: 520px;
+  padding: 1em;
+  text-indent: 2em;
+  border: 2px solid #000;
+  resize: none;
+  border-radius: 1em;
+}
+
+.buttons button {
+  padding: 1em 2em;
+  margin: 0 1em;
+  background-color: #3b7f94;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 1px solid #3b7f94;
+  border-radius: 1.3em;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.buttons button:hover,
+.buttons button:target {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textReader input {
+  height: 3em;
+  width: 6em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border: 1px solid #3b7f94;
+}
+
+#moon {
+  color: #fff;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  display: inline-block;
+  opacity: 0;
+}
+
+#moon:hover {
+  text-shadow: 5px 5px 15px #fff;
+}
+
+#sun {
+  display: inline-block;
+  color: yellow;
+  text-shadow: 1px 1px 3px yellow;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#sun:hover {
+  text-shadow: 5px 5px 15px yellow;
+}
+
+#about {
+  width: 90%;
+  margin: 10% auto;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#about p {
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .close {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+  .close:hover {
+    cursor: pointer;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+  .nav .nav-el {
+    border-bottom: 1px #fff solid;
+    width: 100%;
+    padding: 1em;
+  }
+  .nav .control {
+    position: absolute;
+    top: 16px;
+    right: 1.5em;
+  }
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logo-el {
+    position: absolute;
+    left: 0;
+    margin: 0.2em 1em;
+  }
+  .buttons {
+    display: block;
+  }
+  .textReader textarea {
+    margin-top: 20%;
+    height: 400px;
+    width: 80%;
+  }
+  .buttons button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.5rem;
+  }
+  .inputCont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inputCont input {
+    height: 2.4em;
+    width: 5em;
+    padding: 0.5em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
