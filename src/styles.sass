@@ -1,0 +1,230 @@
+@import "reset";
+
+$light-color: #fff;
+$dark-color: #000;
+$main-color: rgb(59, 127, 148);
+
+body {
+  background-color: $light-color;
+  color: $dark-color;
+}
+.wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: $main-color;
+  padding: 1em;
+}
+.navbar {
+  margin: auto;
+  max-width: 1260px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+  padding-right: 2em;
+}
+.nav-el a {
+  color: $light-color;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.nav-el:hover {
+  border-bottom: 2px solid $dark-color;
+  padding-bottom: 0.4em;
+  a {
+    color: $dark-color;
+  }
+}
+.logo-el {
+  justify-self: flex-start;
+  margin-left: 10%;
+}
+.logo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.burger {
+  color: $light-color;
+  font-size: 1.5em;
+  display: none;
+}
+.close {
+  display: none;
+}
+.control {
+  font-size: 2em;
+}
+
+// textreader style
+.textReader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15%;
+  padding-bottom: 40%;
+  gap: 1.5em;
+  border-bottom: 3px solid $dark-color;
+}
+.textReader textarea {
+  height: 570px;
+  width: 520px;
+  padding: 1em;
+  text-indent: 2em;
+  border: 2px solid $dark-color;
+  resize: none;
+  border-radius: 1em;
+}
+.buttons button {
+  padding: 1em 2em;
+  margin: 0 1em;
+  background-color: $main-color;
+  color: $light-color;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 1px solid $main-color;
+  border-radius: 1.3em;
+  transition: all ease 1s;
+}
+.buttons button:hover,
+.buttons button:target {
+  background-color: $dark-color;
+  border: 2px solid $light-color;
+}
+.buttons {
+  display: flex;
+}
+.textReader input {
+  height: 3em;
+  width: 6em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border: 1px solid $main-color;
+}
+#moon {
+  color: $light-color;
+  transition: all 1s ease-out;
+  display: inline-block;
+  // transform: ;
+  opacity: 0;
+}
+#moon:hover {
+  text-shadow: 5px 5px 15px $light-color;
+}
+#sun {
+  display: inline-block;
+  color: yellow;
+  text-shadow: 1px 1px 3px yellow;
+  transition: all 1s ease-out;
+}
+#sun:hover {
+  text-shadow: 5px 5px 15px yellow;
+}
+
+#about {
+  width: 90%;
+  margin: 10% auto;
+}
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#about p {
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .close {
+    display: block;
+    font-size: 1.5rem;
+    color: $light-color;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    transition: all 1s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+    .nav-el {
+      border-bottom: 1px $light-color solid;
+      width: 100%;
+      padding: 1em;
+    }
+    .control {
+      position: absolute;
+      top: 16px;
+      right: 1.5em;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-el {
+    position: absolute;
+    left: 0;
+    margin: 0.2em 1em;
+  }
+  .buttons {
+    display: block;
+  }
+  .textReader textarea {
+    margin-top: 20%;
+    height: 400px;
+    width: 80%;
+  }
+  .buttons button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.5rem;
+  }
+  .inputCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inputCont input {
+    height: 2.4em;
+    width: 5em;
+    padding: 0.5em;
+  }
+}
